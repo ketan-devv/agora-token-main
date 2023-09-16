@@ -19,7 +19,7 @@ var generateRtcToken = function (req, resp) {
     var privilegeExpiredTs = currentTimestamp + expirationTimeInSeconds
     var channelName = req.query.channelName;
     var uid = req.query.uid || 0;
-    var role = req.query.role || 'publisher';
+    var role = req.query.role || 'subscriber';
     var privilegeExpiredTs = req.query.privilegeExpiredTs || (currentTimestamp + expirationTimeInSeconds); // Get privilegeExpiredTs from the query parameters (default to current time + 3600 seconds)
     if (!channelName) {
         return resp.status(400).json({ 'error': 'channel name is required' }).send();
