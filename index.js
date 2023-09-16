@@ -3,7 +3,7 @@ var http = require('http');
 var express = require('express');
 var { RtcTokenBuilder, RtcRole } = require('agora-access-token')
 
-var PORT = 8080;
+var PORT = process.env.PORT;
 
 var appID = "aa42a817d45b4ac097443c6521f1b36d";
 var appCertificate = "a307bda5869f4931a928596449fb268f";
